@@ -6,11 +6,11 @@ require("dotenv").config();
 const PORT = process.env.PORT || 5000;
 
 // middleware to get parsed json data from request
-// app.use(cors({
-//     origin : "*",
-// }));
+app.use(cors({
+    origin : "*",
+}));
 // app.use(cors({ origin: process.env.ORIGIN}));
-app.use(cors({ origin: 'https://frontend-emmar.vercel.app/' }));
+// app.use(cors({ origin: 'https://frontend-emmar.vercel.app/' }));
 app.options("/api/user/register", cors());
 
 app.use(express.json());
